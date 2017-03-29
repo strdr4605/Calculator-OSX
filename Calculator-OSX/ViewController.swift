@@ -9,7 +9,41 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet weak var stack: NSTextField!
+    @IBOutlet weak var lastNumber: NSTextField!
+    
+    
+    
+    @IBAction func numbers(_ sender: NSButton) {
+        lastNumber.stringValue = lastNumber.stringValue + String(sender.tag - 1);
+    }
+    
+    
+    @IBAction func operation(_ sender: NSButton) {
+//        tags
+//        14 Division
+//        15 Multipliction
+//        16 Minus
+//        17 Plus
+        switch sender.tag {
+        case 14:
+            stack.stringValue = stack.stringValue + lastNumber.stringValue + "/";
+            break;
+        case 15:
+            stack.stringValue = stack.stringValue + lastNumber.stringValue + "*";
+            break;
+        case 16:
+            stack.stringValue = stack.stringValue + lastNumber.stringValue + "-";
+            break;
+        case 17:
+            stack.stringValue = stack.stringValue + lastNumber.stringValue + "+";
+            break;
+        default:
+            break;
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
