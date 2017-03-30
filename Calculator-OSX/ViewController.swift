@@ -13,6 +13,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var stack: NSTextField!
     @IBOutlet weak var lastNumber: NSTextField!
     
+    @IBOutlet weak var equal: NSButton!
+    let logic: MathLogic = MathLogic()
+
     
     
     @IBAction func numbers(_ sender: NSButton) {
@@ -44,6 +47,11 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func equalAction(_ sender: Any) {
+        stack.stringValue = stack.stringValue + lastNumber.stringValue
+        print(stack.stringValue)
+        logic.evalExpression(mathExpression: stack.stringValue)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
