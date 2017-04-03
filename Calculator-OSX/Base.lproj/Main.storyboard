@@ -781,6 +781,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="delete:" target="XfG-lQ-9wD" id="31m-fW-8QB"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="R00-1Y-QbC">
                                 <rect key="frame" x="80" y="279" width="80" height="72"/>
@@ -789,6 +792,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="reverse:" target="XfG-lQ-9wD" id="Lpz-nd-ySR"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="op4-nb-cd3">
                                 <rect key="frame" x="160" y="279" width="80" height="72"/>
@@ -797,6 +803,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="XfG-lQ-9wD" id="N3k-Kn-a32"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-N4-FUV">
                                 <rect key="frame" x="240" y="279" width="80" height="72"/>
