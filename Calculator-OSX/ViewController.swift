@@ -12,10 +12,11 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var stack: NSTextField!
     @IBOutlet weak var lastNumber: NSTextField!
+    var clearLastNumber = false;
+    var clearStack = false;
     
     @IBOutlet weak var equal: NSButton!
     let logic: MathLogic = MathLogic()
-
     
     
     @IBAction func numbers(_ sender: NSButton) {
@@ -40,44 +41,62 @@ class ViewController: NSViewController {
 //        16 Minus
 //        17 Plus
         if (lastNumber.stringValue != "") {
+            logic.appendToExpression(symbol: lastNumber.stringValue)
             switch sender.tag {
             case 13:
                 lastNumber.stringValue = String(lastNumber.doubleValue / 100);
+                logic.resetMathExpression()
                 clearLastNumber = true;
                 break;
             case 14:
-                stack.stringValue = stack.stringValue + lastNumber.stringValue + "/";
+                logic.appendToExpression(symbol: "/")
+                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "/";
                 clearLastNumber = true;
                 break;
             case 15:
-                stack.stringValue = stack.stringValue + lastNumber.stringValue + "*";
+                logic.appendToExpression(symbol: "*")
+                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "*";
                 clearLastNumber = true;
                 break;
             case 16:
-                stack.stringValue = stack.stringValue + lastNumber.stringValue + "-";
+                logic.appendToExpression(symbol: "-")
+                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "-";
                 clearLastNumber = true;
                 break;
             case 17:
-                stack.stringValue = stack.stringValue + lastNumber.stringValue + "+";
+                logic.appendToExpression(symbol: "+")
+                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "+";
                 clearLastNumber = true;
                 break;
             default:
                 break;
             }
+            stack.stringValue = logic.getMathExpression()
         }
     }
     
     
     @IBAction func equal(_ sender: NSButton) {
-        stack.stringValue = stack.stringValue + lastNumber.stringValue;
+        //stack.stringValue = stack.stringValue + lastNumber.stringValue;
+        logic.appendToExpression(symbol: lastNumber.stringValue)
+        stack.stringValue = logic.getMathExpression()
+        lastNumber.stringValue = logic.getExpressionValue()
         clearLastNumber = true;
         clearStack = true;
+        print(stack.stringValue)
+        
     }
     
     
     @IBAction func delete(_ sender: NSButton) {
         if (lastNumber.stringValue != "") {
-            lastNumber.stringValue.remove(at: lastNumber.stringValue.index(before: lastNumber.stringValue.endIndex));
+            if (clearLastNumber) {
+                stack.stringValue = lastNumber.stringValue
+                lastNumber.stringValue = ""
+                logic.resetMathExpression()
+            } else {
+                lastNumber.stringValue.remove(at: lastNumber.stringValue.index(before: lastNumber.stringValue.endIndex));
+            }
         } else {
             stack.stringValue = "";
         }
@@ -97,7 +116,7 @@ class ViewController: NSViewController {
     @IBAction func equalAction(_ sender: Any) {
         stack.stringValue = stack.stringValue + lastNumber.stringValue
         print(stack.stringValue)
-        logic.evalExpression(mathExpression: stack.stringValue)
+        print(logic.isNumber(expression: stack.stringValue))
     }
     override func viewDidLoad() {
         super.viewDidLoad()

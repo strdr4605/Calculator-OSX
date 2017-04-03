@@ -845,7 +845,7 @@
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="equalAction:" target="XfG-lQ-9wD" id="DTF-qF-l7t"/>
+                                    <action selector="equal:" target="XfG-lQ-9wD" id="dR2-d7-4Nc"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="yg1-Br-Xbv">
