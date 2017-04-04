@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class SimpleCalculator: NSViewController {
     
     @IBOutlet weak var stack: NSTextField!
     @IBOutlet weak var lastNumber: NSTextField!
@@ -104,6 +104,8 @@ class ViewController: NSViewController {
             lastNumber.stringValue = lastNumber.stringValue + ".";
         }
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
