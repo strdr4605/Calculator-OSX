@@ -1206,7 +1206,7 @@
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="parenthesis:" target="8Yc-pD-ilr" id="neq-TS-ho7"/>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="LFf-te-JPR"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="28" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-yl-pA0">
