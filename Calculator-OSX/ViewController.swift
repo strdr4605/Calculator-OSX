@@ -14,6 +14,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var lastNumber: NSTextField!
     var clearLastNumber = false;
     var clearStack = false;
+    var allowOperation = false;
     
     
     @IBAction func numbers(_ sender: NSButton) {
@@ -27,6 +28,7 @@ class ViewController: NSViewController {
             lastNumber.stringValue = String(sender.tag - 1);
             clearLastNumber = false;
         }
+        allowOperation = true;
     }
     
     
@@ -37,7 +39,7 @@ class ViewController: NSViewController {
 //        15 Multipliction
 //        16 Minus
 //        17 Plus
-        if (lastNumber.stringValue != "") {
+        if (lastNumber.stringValue != "" && allowOperation) {
             switch sender.tag {
             case 13:
                 lastNumber.stringValue = String(lastNumber.doubleValue / 100);
@@ -62,22 +64,26 @@ class ViewController: NSViewController {
             default:
                 break;
             }
+            allowOperation = sender.tag == 13 ? true : false;
         }
     }
     
     
     @IBAction func equal(_ sender: NSButton) {
-        stack.stringValue = stack.stringValue + lastNumber.stringValue;
-        clearLastNumber = true;
-        clearStack = true;
+        if (allowOperation) {
+            stack.stringValue = stack.stringValue + lastNumber.stringValue;
+            clearLastNumber = true;
+            clearStack = true;
+            allowOperation = !allowOperation;
+        }
     }
     
     
     @IBAction func delete(_ sender: NSButton) {
         if (lastNumber.stringValue != "") {
             lastNumber.stringValue.remove(at: lastNumber.stringValue.index(before: lastNumber.stringValue.endIndex));
-        } else {
-            stack.stringValue = "";
+        } else if (stack.stringValue != "") {
+            stack.stringValue.remove(at: stack.stringValue.index(before: stack.stringValue.endIndex));
         }
     }
     
@@ -93,6 +99,11 @@ class ViewController: NSViewController {
     }
     
     
+    @IBAction func comma(_ sender: NSButton) {
+        if(!(lastNumber.stringValue.range(of: ".") != nil)) {
+            lastNumber.stringValue = lastNumber.stringValue + ".";
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

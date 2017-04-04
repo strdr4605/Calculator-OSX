@@ -831,10 +831,13 @@
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-Id-n8e">
                                 <rect key="frame" x="160" y="-1" width="80" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="," bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2pk-CC-g19">
+                                <buttonCell key="cell" type="smallSquare" title="." bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2pk-CC-g19">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="comma:" target="XfG-lQ-9wD" id="hAh-Mh-wWc"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="18" translatesAutoresizingMaskIntoConstraints="NO" id="ndr-0C-w5A">
                                 <rect key="frame" x="240" y="-1" width="80" height="72"/>
