@@ -913,19 +913,362 @@
             <objects>
                 <viewController title="Scientific" showSeguePresentationStyle="single" id="8Yc-pD-ilr" customClass="ScientificCalculator" customModule="Calculator_OSX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="FIH-4B-1vO">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="481" height="445"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="OXv-p7-PSa">
+                                <rect key="frame" x="161" y="139" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="4" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a8n-x1-pr9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="Vyn-Hr-e0J"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="jB1-Xa-umr">
+                                <rect key="frame" x="241" y="139" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="5" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Q0W-Hn-zrl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="zVr-kW-9FP"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-AP-akY">
+                                <rect key="frame" x="321" y="139" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="6" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aab-9G-KUi">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="wrI-D8-H9I"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="16" translatesAutoresizingMaskIntoConstraints="NO" id="Fy8-2l-4FA">
+                                <rect key="frame" x="401" y="139" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="-" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Gu-gU-Pta">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="4bx-CC-Kv8"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="R6h-m7-w84">
+                                <rect key="frame" x="161" y="209" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="7" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lHm-GI-E8o">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="6C1-cB-3EU"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="9" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yDs-m8-3hZ">
+                                <rect key="frame" x="241" y="209" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="8" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VlR-gw-EEs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="7na-oY-W7G"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="U8M-17-EuM">
+                                <rect key="frame" x="321" y="209" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="9" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Jf-aL-XfN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="SXA-pZ-dKY"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="Frd-0m-ftt">
+                                <rect key="frame" x="401" y="209" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="x" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gte-8w-O2w">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="MX6-7d-LGJ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="yn3-zV-VHG">
+                                <rect key="frame" x="161" y="279" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="C" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="akV-Ua-IfM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="delete:" target="8Yc-pD-ilr" id="zqq-zE-EP3"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="q1k-x8-bpe">
+                                <rect key="frame" x="241" y="279" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="+/-" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lKL-rV-fAe">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="reverse:" target="8Yc-pD-ilr" id="wTb-BB-UUN"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="1kr-Zx-H7r">
+                                <rect key="frame" x="321" y="279" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="%" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0xI-a1-Q5A">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="eXm-dJ-iLO"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="msc-dB-aST">
+                                <rect key="frame" x="401" y="279" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="/" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7WN-hN-hjt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="YQJ-zx-Jb9"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-qL-CaP">
+                                <rect key="frame" x="161" y="-1" width="160" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="0" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DkI-wO-jyy">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="lSp-3P-xCV"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="lEN-af-IFr">
+                                <rect key="frame" x="321" y="-1" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="." bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9oI-cE-6mA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="comma:" target="8Yc-pD-ilr" id="vBJ-Uc-Dqp"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="18" translatesAutoresizingMaskIntoConstraints="NO" id="N38-OV-w6M">
+                                <rect key="frame" x="401" y="-1" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="=" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AfS-mb-Spx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="equal:" target="8Yc-pD-ilr" id="6OM-MD-1xR"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="KMV-FD-ySW">
+                                <rect key="frame" x="161" y="69" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="1" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0c7-Iv-UWJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="4xf-Fw-Hmj"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="aFF-yO-Q0R">
+                                <rect key="frame" x="241" y="69" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="2" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QMS-GO-e6B">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="7LV-sh-pI8"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="kpe-gP-lDY">
+                                <rect key="frame" x="321" y="69" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="3" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lOm-Xw-Uhw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="numbers:" target="8Yc-pD-ilr" id="EQe-BA-pa3"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHg-oY-ARe">
+                                <rect key="frame" x="401" y="69" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="+" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5dS-eI-MwZ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="PZq-IL-M7v"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvh-Wx-fZD">
+                                <rect key="frame" x="159" y="410" width="324" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Stack" id="bVG-RW-6EJ">
+                                    <font key="font" size="15" name="Helvetica-Light"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-0z-CdY">
+                                <rect key="frame" x="159" y="360" width="324" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="Last" id="7bL-AD-6rQ">
+                                    <font key="font" size="40" name="Helvetica-Light"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="24" translatesAutoresizingMaskIntoConstraints="NO" id="vkL-dE-uJj">
+                                <rect key="frame" x="1" y="139" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="^" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Esh-ao-YgA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operation:" target="8Yc-pD-ilr" id="9gi-an-0xk"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="25" translatesAutoresizingMaskIntoConstraints="NO" id="5m5-JO-3fA">
+                                <rect key="frame" x="81" y="139" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="sqrt" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Njq-gI-LYQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="JXa-Yl-8b2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="22" translatesAutoresizingMaskIntoConstraints="NO" id="d6Q-gk-kg8">
+                                <rect key="frame" x="1" y="209" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="e" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kgd-UI-am3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="l5e-iH-C5x"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="23" translatesAutoresizingMaskIntoConstraints="NO" id="6F9-cB-dhl">
+                                <rect key="frame" x="81" y="209" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="pi" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EaE-b9-O0Y">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="db1-Xd-Y1V"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="20" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-fj-ZX3">
+                                <rect key="frame" x="1" y="279" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="(" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Lz-nb-Hf7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="parenthesis:" target="8Yc-pD-ilr" id="M5L-Ve-c5w"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="21" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-dV-4JE">
+                                <rect key="frame" x="81" y="279" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title=")" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2ao-8g-rTo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="parenthesis:" target="8Yc-pD-ilr" id="neq-TS-ho7"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="28" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-yl-pA0">
+                                <rect key="frame" x="1" y="-1" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="ln" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vdp-05-NPQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="sdr-i4-QM0"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="29" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-Y2-mlz">
+                                <rect key="frame" x="81" y="-1" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="log" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kaF-wt-7cx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="bMf-j3-LQq"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="26" translatesAutoresizingMaskIntoConstraints="NO" id="mwS-2u-tdx">
+                                <rect key="frame" x="1" y="69" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="sin" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nMx-5z-Wdf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="AAI-HJ-2xY"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" tag="27" translatesAutoresizingMaskIntoConstraints="NO" id="ZwC-t2-7sJ">
+                                <rect key="frame" x="81" y="69" width="80" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" title="cos" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cEf-5Y-EsY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="40" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="advancedOperation:" target="8Yc-pD-ilr" id="mWu-Ko-5wg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="lastNumber" destination="EOI-0z-CdY" id="Zu1-NB-h0q"/>
+                        <outlet property="stack" destination="qvh-Wx-fZD" id="Kmq-ir-D5C"/>
+                    </connections>
                 </viewController>
                 <customObject id="8zA-jp-MC2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="558"/>
+            <point key="canvasLocation" x="503.5" y="733.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vww-jF-3Uu"/>
+        <segue reference="cq2-FE-JQM"/>
     </inferredMetricsTieBreakers>
 </document>
