@@ -77,6 +77,7 @@ class SimpleCalculator: NSViewController {
             stack.stringValue = stack.stringValue + lastNumber.stringValue;
             clearLastNumber = true;
             clearStack = true;
+            lastNumber.stringValue = logic.getExpressionValue(expression: stack.stringValue)
             allowOperation = !allowOperation;
         }
     }

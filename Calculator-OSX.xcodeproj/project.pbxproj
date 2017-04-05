@@ -57,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				ABEEFA8C1E8B0E03007DDCB6 /* AppDelegate.swift */,
+				D61E920B1E8B9AAF00438E31 /* MathLogic.swift */,
 				ABEEFA8E1E8B0E03007DDCB6 /* SimpleCalculator.swift */,
 				AB1BEFCA1E9372EC00632FCD /* ScientificCalculator.swift */,
 				ABEEFA901E8B0E03007DDCB6 /* Assets.xcassets */,
@@ -137,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61E920C1E8B9AAF00438E31 /* MathLogic.swift in Sources */,
 				ABEEFA8F1E8B0E03007DDCB6 /* SimpleCalculator.swift in Sources */,
 				AB1BEFCB1E9372EC00632FCD /* ScientificCalculator.swift in Sources */,
 				ABEEFA8D1E8B0E03007DDCB6 /* AppDelegate.swift in Sources */,

@@ -17,6 +17,8 @@ class ScientificCalculator: NSViewController {
     var clearStack = false;
     var allowOperation = false;
     
+    let logic: MathLogic = MathLogic()
+    
     
     @IBAction func numbers(_ sender: NSButton) {
         if (clearStack) {
@@ -61,7 +63,7 @@ class ScientificCalculator: NSViewController {
                 clearLastNumber = true;
                 break;
             case 24:
-                stack.stringValue = stack.stringValue + "^";
+                stack.stringValue = stack.stringValue + "**";
                 clearLastNumber = true;
                 break;
             default:
@@ -108,9 +110,12 @@ class ScientificCalculator: NSViewController {
     
     @IBAction func equal(_ sender: NSButton) {
         if (allowOperation) {
-            stack.stringValue = stack.stringValue + lastNumber.stringValue;
+            if(stack.stringValue.characters.last != ")") {
+                stack.stringValue = stack.stringValue + lastNumber.stringValue;
+            }
             clearLastNumber = true;
             clearStack = true;
+            lastNumber.stringValue = logic.getExpressionValue(expression: stack.stringValue)
             allowOperation = !allowOperation;
         }
     }
