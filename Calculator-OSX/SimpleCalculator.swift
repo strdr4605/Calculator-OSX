@@ -16,6 +16,9 @@ class SimpleCalculator: NSViewController {
     var clearStack = false;
     var allowOperation = false;
     
+    @IBOutlet weak var equal: NSButton!
+    let logic: MathLogic = MathLogic()
+    
     
     @IBAction func numbers(_ sender: NSButton) {
         if (clearStack) {
