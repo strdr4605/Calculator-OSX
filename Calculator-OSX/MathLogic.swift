@@ -21,13 +21,14 @@ class MathLogic {
         }
     }
     
-    func getExpressionValue() -> String {
+    func getExpressionValue(expression: String) -> String {
+        mathExpression = covertExpressionElmentsToDouble(initialExpression: expression)
         let stringWithMathematicalOperation: String = mathExpression
         let exp: NSExpression = NSExpression(format: stringWithMathematicalOperation)
         let result: Double = exp.expressionValue(with: nil, context: nil) as! Double
         mathExpression = ""
         print(result)
-        return String(result)
+        return String(result).replacingOccurrences(of: ".0", with: "")
     }
     
     func isNumber(expression: String) -> Bool {
@@ -37,6 +38,34 @@ class MathLogic {
         else {
             return false
         }
+    }
+    
+    func convertToDouble(number: String) -> String {
+        let converted: Double = Double(number)!
+        return String(converted)
+    }
+    
+    func covertExpressionElmentsToDouble(initialExpression: String) -> String {
+        var convertedToDouble: String = ""
+        var number: String = ""
+        for index in initialExpression.characters.indices {
+            if(isNumber(expression: String(initialExpression[index])) || String(initialExpression[index]) == ".") {
+                number += String(initialExpression[index])
+            }
+            else {
+                if(number != "") {
+                    convertedToDouble += convertToDouble(number: number)
+                }
+                convertedToDouble += String(initialExpression[index])
+                number = ""
+//                print(convertedToDouble)
+            }
+        }
+        if(number != "") {
+            convertedToDouble += convertToDouble(number: number)
+            number = ""
+        }
+        return convertedToDouble
     }
     
     func resetMathExpression() {

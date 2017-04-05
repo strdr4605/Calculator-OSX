@@ -41,49 +41,40 @@ class ViewController: NSViewController {
 //        16 Minus
 //        17 Plus
         if (lastNumber.stringValue != "") {
-            logic.appendToExpression(symbol: lastNumber.stringValue)
+
             switch sender.tag {
             case 13:
                 lastNumber.stringValue = String(lastNumber.doubleValue / 100);
-                logic.resetMathExpression()
                 clearLastNumber = true;
                 break;
             case 14:
-                logic.appendToExpression(symbol: "/")
-                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "/";
+                stack.stringValue = stack.stringValue + lastNumber.stringValue + "/";
                 clearLastNumber = true;
                 break;
             case 15:
-                logic.appendToExpression(symbol: "*")
-                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "*";
+                stack.stringValue = stack.stringValue + lastNumber.stringValue + "*";
                 clearLastNumber = true;
                 break;
             case 16:
-                logic.appendToExpression(symbol: "-")
-                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "-";
+                stack.stringValue = stack.stringValue + lastNumber.stringValue + "-";
                 clearLastNumber = true;
                 break;
             case 17:
-                logic.appendToExpression(symbol: "+")
-                //stack.stringValue = stack.stringValue + lastNumber.stringValue + "+";
+                stack.stringValue = stack.stringValue + lastNumber.stringValue + "+";
                 clearLastNumber = true;
                 break;
             default:
                 break;
             }
-            stack.stringValue = logic.getMathExpression()
         }
     }
     
     
     @IBAction func equal(_ sender: NSButton) {
-        //stack.stringValue = stack.stringValue + lastNumber.stringValue;
-        logic.appendToExpression(symbol: lastNumber.stringValue)
-        stack.stringValue = logic.getMathExpression()
-        lastNumber.stringValue = logic.getExpressionValue()
+        stack.stringValue = stack.stringValue + lastNumber.stringValue;
         clearLastNumber = true;
         clearStack = true;
-        print(stack.stringValue)
+        lastNumber.stringValue = logic.getExpressionValue(expression: stack.stringValue)
         
     }
     
