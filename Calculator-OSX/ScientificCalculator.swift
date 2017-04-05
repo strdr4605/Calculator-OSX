@@ -42,7 +42,32 @@ class ScientificCalculator: NSViewController {
         //        17 Plus
         //        24 Power
         //        21 )
-        if (lastNumber.stringValue != "" && allowOperation) {
+        if (stack.stringValue.characters.last == ")" ) {
+            switch sender.tag {
+            case 14:
+                stack.stringValue = stack.stringValue  + "/";
+                clearLastNumber = true;
+                break;
+            case 15:
+                stack.stringValue = stack.stringValue + "*";
+                clearLastNumber = true;
+                break;
+            case 16:
+                stack.stringValue = stack.stringValue + "-";
+                clearLastNumber = true;
+                break;
+            case 17:
+                stack.stringValue = stack.stringValue + "+";
+                clearLastNumber = true;
+                break;
+            case 24:
+                stack.stringValue = stack.stringValue + "^";
+                clearLastNumber = true;
+                break;
+            default:
+                break;
+            }
+        } else if (lastNumber.stringValue != "" && allowOperation) {
             switch sender.tag {
             case 13:
                 lastNumber.stringValue = String(lastNumber.doubleValue / 100);
@@ -76,6 +101,7 @@ class ScientificCalculator: NSViewController {
         if (lastNumber.stringValue != "" && sender.tag == 21) {
             stack.stringValue = stack.stringValue + lastNumber.stringValue + ")";
             clearLastNumber = true;
+            allowOperation = true;
         }
     }
     
