@@ -65,8 +65,8 @@ class GraphController: NSViewController, CPTPlotDataSource {
         graph.titlePlotAreaFrameAnchor = CPTRectAnchor.top
         //hostView.hostedGraph = graph
         
-        let theme = CPTTheme(named: .darkGradientTheme)
-        graph.apply(theme)
+        //let theme = CPTTheme(named: .darkGradientTheme)
+        //graph.apply(theme)
         
         // Axes
         let axisSet = graph.axisSet as! CPTXYAxisSet
@@ -113,7 +113,7 @@ class GraphController: NSViewController, CPTPlotDataSource {
         
         if let lineStyle = dataSourceLinePlot.dataLineStyle?.mutableCopy() as? CPTMutableLineStyle {
             lineStyle.lineWidth              = 3.0
-            lineStyle.lineColor              = .green()
+            lineStyle.lineColor              = .black()
             dataSourceLinePlot.dataLineStyle = lineStyle
         }
         

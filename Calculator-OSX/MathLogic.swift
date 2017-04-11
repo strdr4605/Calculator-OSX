@@ -75,4 +75,29 @@ class MathLogic {
     func getMathExpression() -> String {
         return mathExpression.replacingOccurrences(of: ".0", with: "")
     }
+    
+    func getTrigonometricValue(function: String) -> String {
+        var value: String? = nil
+        var functionExpression: NSExpression? = nil
+        switch function {
+        case "sin":
+            functionExpression = NSExpression(format:"FUNCTION(90.0 * " + String(Double.pi) + " / 180, 'getSin')")
+            break
+        default:
+            value = "Not a trigonometric function"
+            break
+        }
+        if(functionExpression != nil) {
+            let functionValue: Double = functionExpression!.expressionValue(with: nil, context: nil) as! Double
+            print(functionValue)
+            value = String(functionValue)
+        }
+        return value!
+    }
+}
+
+public extension NSNumber {
+    func getSin() -> NSNumber {
+        return NSNumber(value: sin(self.doubleValue))//sqrt(self.doubleValue)
+    }
 }
