@@ -99,14 +99,14 @@ class GraphController: NSViewController, CPTPlotDataSource {
         plotSpace.yRange = CPTPlotRange(location:0.0, length:100.0)
         
     }
-        
+    
     
     func configureChart() {
         // 1 - Get a reference to the graph
         let graph = hostView.hostedGraph!
         
         self.plotData = newPlotData()
-
+        
         
         let dataSourceLinePlot = CPTScatterPlot(frame: .zero)
         dataSourceLinePlot.identifier = NSString.init(string: "Date Plot")
