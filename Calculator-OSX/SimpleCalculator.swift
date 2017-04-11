@@ -113,7 +113,6 @@ class SimpleCalculator: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
     }
@@ -123,7 +122,4 @@ class SimpleCalculator: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
-
