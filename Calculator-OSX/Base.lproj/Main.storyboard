@@ -846,6 +846,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="equal:" target="XfG-lQ-9wD" id="dR2-d7-4Nc"/>
+                                    <segue destination="g0S-ND-gAw" kind="show" id="rTv-47-xBN"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="yg1-Br-Xbv">
@@ -920,7 +921,47 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="841"/>
+            <point key="canvasLocation" x="75" y="955.5"/>
+        </scene>
+        <!--Graph Controller-->
+        <scene sceneID="30D-Lg-LcI">
+            <objects>
+                <viewController id="uYg-KS-5cX" customClass="GraphController" customModule="Calculator_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="fm3-cs-yob">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7DM-iI-IPr" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="hostView" destination="7DM-iI-IPr" id="nhF-hL-AdT"/>
+                    </connections>
+                </viewController>
+                <customObject id="tfD-Kj-GTh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="2146"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="ub6-5x-7A4">
+            <objects>
+                <windowController id="g0S-ND-gAw" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="jkg-Wv-Jay">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                    </window>
+                    <connections>
+                        <segue destination="uYg-KS-5cX" kind="relationship" relationship="window.shadowedContentViewController" id="Arz-5M-gHl"/>
+                    </connections>
+                </windowController>
+                <customObject id="UFp-wH-Hhn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="1583"/>
         </scene>
     </scenes>
     <resources>

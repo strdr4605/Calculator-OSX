@@ -75,7 +75,6 @@ class ViewController: NSViewController {
         clearLastNumber = true;
         clearStack = true;
         lastNumber.stringValue = logic.getExpressionValue(expression: stack.stringValue)
-        
     }
     
     
@@ -111,7 +110,6 @@ class ViewController: NSViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
     }
@@ -121,7 +119,4 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
-
