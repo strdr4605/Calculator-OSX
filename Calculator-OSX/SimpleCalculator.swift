@@ -45,10 +45,10 @@ class SimpleCalculator: NSViewController {
 //        17 Plus
         if (lastNumber.stringValue != "" && allowOperation) {
             switch sender.tag {
-            case 13:
-                lastNumber.stringValue = String(lastNumber.doubleValue / 100);
-                clearLastNumber = true;
-                break;
+//            case 13:
+//                lastNumber.stringValue = String(lastNumber.doubleValue / 100);
+//                clearLastNumber = true;
+//                break;
             case 14:
                 stack.stringValue = stack.stringValue + lastNumber.stringValue + "/";
                 clearLastNumber = true;
@@ -68,7 +68,7 @@ class SimpleCalculator: NSViewController {
             default:
                 break;
             }
-            allowOperation = sender.tag == 13 ? true : false;
+//            allowOperation = sender.tag == 13 ? true : false;
         }
     }
     
@@ -84,6 +84,10 @@ class SimpleCalculator: NSViewController {
     }
     
     
+    @IBAction func deleteAll(_ sender: NSButton) {
+        lastNumber.stringValue = "";
+        stack.stringValue = "";
+    }
     @IBAction func delete(_ sender: NSButton) {
         if (lastNumber.stringValue != "") {
             lastNumber.stringValue.remove(at: lastNumber.stringValue.index(before: lastNumber.stringValue.endIndex));
