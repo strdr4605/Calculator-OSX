@@ -17,6 +17,7 @@ class SimpleCalculator: NSViewController {
     var allowOperation = false;
     
     @IBOutlet weak var equal: NSButton!
+    
     let logic: MathLogic = MathLogic()
     
     

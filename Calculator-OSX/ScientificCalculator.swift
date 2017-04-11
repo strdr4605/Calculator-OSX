@@ -63,7 +63,7 @@ class ScientificCalculator: NSViewController {
                 clearLastNumber = true;
                 break;
             case 24:
-                stack.stringValue = stack.stringValue + "**";
+                stack.stringValue = stack.stringValue + "^";
                 clearLastNumber = true;
                 break;
             default:
