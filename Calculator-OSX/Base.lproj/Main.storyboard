@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -660,7 +661,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-305" y="398"/>
         </scene>
         <!--Simple-->
         <scene sceneID="hIz-AP-VOD">
@@ -832,8 +833,7 @@
                                     <font key="font" size="40" name="HelveticaNeue-Thin"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="equal:" target="XfG-lQ-9wD" id="dR2-d7-4Nc"/>
-                                    <segue destination="g0S-ND-gAw" kind="show" id="rTv-47-xBN"/>
+                                    <action selector="equal:" target="XfG-lQ-9wD" id="TSN-fZ-n7S"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="yg1-Br-Xbv">
@@ -889,10 +889,10 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPb-MO-T3Q">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPb-MO-T3Q">
                                 <rect key="frame" x="0.0" y="403" width="320" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="Ky7-TA-ypN">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="right" drawsBackground="YES" id="Ky7-TA-ypN">
                                     <font key="font" size="20" name="Helvetica-Light"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.92931067943572998" green="0.92946994304656982" blue="0.92930072546005249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -901,6 +901,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="editText" destination="jPb-MO-T3Q" id="ztW-z2-KGd"/>
                         <outlet property="equal" destination="ndr-0C-w5A" id="eYL-vH-8QN"/>
                         <outlet property="lastNumber" destination="1XW-Zs-2dU" id="cve-0I-Y5Z"/>
                         <outlet property="stack" destination="jPb-MO-T3Q" id="7Ze-bI-l0g"/>
@@ -908,12 +909,12 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="955.5"/>
+            <point key="canvasLocation" x="36" y="1201"/>
         </scene>
-        <!--Graph Controller-->
+        <!--GraphController-->
         <scene sceneID="30D-Lg-LcI">
             <objects>
-                <viewController id="uYg-KS-5cX" customClass="GraphController" customModule="Calculator_OSX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GraphController" identifier="GraphController" storyboardIdentifier="GraphController" id="uYg-KS-5cX" customClass="GraphController" customModule="Calculator_OSX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="fm3-cs-yob">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -930,7 +931,7 @@
                 </viewController>
                 <customObject id="tfD-Kj-GTh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="2146"/>
+            <point key="canvasLocation" x="54" y="2221"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="ub6-5x-7A4">
@@ -939,7 +940,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="jkg-Wv-Jay">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="contentRect" x="294" y="583" width="480" height="294"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
                     </window>
                     <connections>
@@ -948,7 +949,7 @@
                 </windowController>
                 <customObject id="UFp-wH-Hhn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73" y="1583"/>
+            <point key="canvasLocation" x="54" y="1661"/>
         </scene>
         <!--Scientific-->
         <scene sceneID="76L-bb-Drl">
@@ -1286,10 +1287,10 @@
                                     <action selector="advancedOperation:" target="8Yc-pD-ilr" id="mWu-Ko-5wg"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1b-ga-2ha">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1b-ga-2ha">
                                 <rect key="frame" x="1" y="400" width="480" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="lpQ-cu-OTu">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" drawsBackground="YES" id="lpQ-cu-OTu">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.92931067943572998" green="0.92946994304656982" blue="0.92930072546005249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1298,6 +1299,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="yn3-zV-VHG" id="VHI-f2-gbj"/>
                         <outlet property="lastNumber" destination="EOI-0z-CdY" id="Zu1-NB-h0q"/>
                         <outlet property="stack" destination="L1b-ga-2ha" id="6xN-rr-tBA"/>
                     </connections>
@@ -1311,6 +1313,6 @@
         <image name="NSAddTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vww-jF-3Uu"/>
+        <segue reference="cq2-FE-JQM"/>
     </inferredMetricsTieBreakers>
 </document>

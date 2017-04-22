@@ -17,6 +17,8 @@ class ScientificCalculator: NSViewController {
     var clearStack = false;
     var allowOperation = false;
     
+    @IBOutlet weak var deleteButton: NSButton!
+    
     let logic: MathLogic = MathLogic()
     
     
@@ -109,6 +111,11 @@ class ScientificCalculator: NSViewController {
     
     
     @IBAction func equal(_ sender: NSButton) {
+        if((stack.stringValue.range(of: "y=") != nil) || (stack.stringValue.range(of: "=y") != nil)) {
+            let myVC = self.storyboard?.instantiateController(withIdentifier: "GraphController") as! GraphController
+            myVC.function = stack.stringValue
+            self.presentViewControllerAsModalWindow(myVC)
+        }
         if (allowOperation) {
             if(stack.stringValue.characters.last != ")") {
                 stack.stringValue = stack.stringValue + lastNumber.stringValue;
@@ -167,19 +174,43 @@ class ScientificCalculator: NSViewController {
     @IBAction func advancedOperation(_ sender: NSButton) {
         switch sender.tag {
         case 22:
-            lastNumber.stringValue = String(M_E);
+            if(lastNumber.stringValue == "" || clearLastNumber) {
+                lastNumber.stringValue = String(M_E);
+            }
+            else {
+                lastNumber.stringValue += String(M_E)
+            }
             break;
         case 23:
-            lastNumber.stringValue = String(M_PI);
+            if(lastNumber.stringValue == "" || clearLastNumber) {
+                lastNumber.stringValue = String(M_PI);
+            }
+            else {
+                lastNumber.stringValue += String(M_PI);
+            }
             break;
         case 25:
             lastNumber.stringValue = String(sqrt(lastNumber.doubleValue));
             break;
         case 26:
-            lastNumber.stringValue = String(sin(lastNumber.doubleValue));
+            if(lastNumber.stringValue != "") {
+                lastNumber.stringValue = String(sin(lastNumber.doubleValue));
+            }
+            else {
+                lastNumber.stringValue = "sin("
+                clearLastNumber = false
+                allowOperation = true
+            }
             break;
         case 27:
-            lastNumber.stringValue = String(cos(lastNumber.doubleValue));
+            if(lastNumber.stringValue != "") {
+                lastNumber.stringValue = String(cos(lastNumber.doubleValue));
+            }
+            else {
+                lastNumber.stringValue = "cos("
+                clearLastNumber = false
+                allowOperation = true
+            }
             break;
         case 28:
             lastNumber.stringValue = String(log(lastNumber.doubleValue));
@@ -190,10 +221,30 @@ class ScientificCalculator: NSViewController {
         default:
             break;
         }
+        if(clearStack) {
+            stack.stringValue = ""
+            clearStack = !clearStack
+        }
+    }
+    
+    func longTap(_ sender: NSGestureRecognizer){
+        //print("Long tap")
+        if sender.state == .ended {
+            //print("UIGestureRecognizerStateEnded")
+            //Do Whatever You want on End of Gesture
+        }
+        else if sender.state == .began {
+            //print("UIGestureRecognizerStateBegan.")
+            //Do Whatever You want on Began of Gesture
+            lastNumber.stringValue = ""
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
+        let longPress = NSPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
+        deleteButton.addGestureRecognizer(longPress)
         // Do view setup here.
     }
     

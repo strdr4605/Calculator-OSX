@@ -16,6 +16,7 @@ class SimpleCalculator: NSViewController {
     var clearStack = false;
     var allowOperation = false;
     
+    @IBOutlet weak var graphWindow: NSWindowController!
     @IBOutlet weak var equal: NSButton!
     
     let logic: MathLogic = MathLogic()
@@ -43,6 +44,11 @@ class SimpleCalculator: NSViewController {
 //        15 Multipliction
 //        16 Minus
 //        17 Plus
+        if(lastNumber.stringValue != "") {
+            stack.stringValue = ""
+            allowOperation = true
+            clearStack = false
+        }
         if (lastNumber.stringValue != "" && allowOperation) {
             switch sender.tag {
 //            case 13:
@@ -74,6 +80,13 @@ class SimpleCalculator: NSViewController {
     
     
     @IBAction func equal(_ sender: NSButton) {
+        //stack.stringValue = "y=x**2"
+        print(stack.stringValue)
+        if((stack.stringValue.range(of: "y=") != nil) || (stack.stringValue.range(of: "=y") != nil)) {
+            let myVC = self.storyboard?.instantiateController(withIdentifier: "GraphController") as! GraphController
+            myVC.function = stack.stringValue
+            self.presentViewControllerAsModalWindow(myVC)
+        }
         if (allowOperation) {
             stack.stringValue = stack.stringValue + lastNumber.stringValue;
             clearLastNumber = true;

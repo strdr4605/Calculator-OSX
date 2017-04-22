@@ -12,6 +12,7 @@
 		ABEEFA8F1E8B0E03007DDCB6 /* SimpleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEEFA8E1E8B0E03007DDCB6 /* SimpleCalculator.swift */; };
 		ABEEFA911E8B0E03007DDCB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEEFA901E8B0E03007DDCB6 /* Assets.xcassets */; };
 		ABEEFA941E8B0E03007DDCB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEEFA921E8B0E03007DDCB6 /* Main.storyboard */; };
+		B4987074A7F54AB44AD5691C /* Pods_Calculator_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F659E5B8F2F873AD7A658759 /* Pods_Calculator_OSX.framework */; };
 		D61E920C1E8B9AAF00438E31 /* MathLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E920B1E8B9AAF00438E31 /* MathLogic.swift */; };
 		D6225ED51E9CE5C0001D55A4 /* GraphController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6225ED41E9CE5C0001D55A4 /* GraphController.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		D61E920B1E8B9AAF00438E31 /* MathLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLogic.swift; sourceTree = "<group>"; };
 		D6225ED41E9CE5C0001D55A4 /* GraphController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphController.swift; sourceTree = "<group>"; };
 		ED523DC2AE804D4EADC98553 /* Pods-Calculator-OSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator-OSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calculator-OSX/Pods-Calculator-OSX.release.xcconfig"; sourceTree = "<group>"; };
+		F659E5B8F2F873AD7A658759 /* Pods_Calculator_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calculator_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE7C82F55137053992D7310 /* Pods-Calculator-OSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator-OSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calculator-OSX/Pods-Calculator-OSX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4987074A7F54AB44AD5691C /* Pods_Calculator_OSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		00BD3867B1C7CD8EB43E07E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F659E5B8F2F873AD7A658759 /* Pods_Calculator_OSX.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
